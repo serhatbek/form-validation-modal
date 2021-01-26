@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  height: 80px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo {
+  width: 80px;
+  height: 80px;
+}
+
+header .container .logo img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+header .container .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .main-nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+header .container .main-nav__list-item {
+  margin-right: 80px;
+}
+
+header .container .main-nav__list-link {
+  text-decoration: none;
+  color: #535461;
+  font-weight: 700;
+}
+
+header .container .main-nav .sign-btns__login {
+  background-color: #229292;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.3s ease-out;
+  outline: none;
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3);
+}
+
+header .container .main-nav .sign-btns__login:hover {
+  transform: translateY(-1px);
+}
+
+header .container .main-nav .sign-btns__login:active {
+  transform: translateY(1px);
+}
+
+header .container .main-nav .sign-btns__signup {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  color: #535461;
+  outline: none;
+  transition: 0.3s ease-out;
+}
+
+header .container .main-nav .sign-btns__signup:hover {
+  color: red;
+}
