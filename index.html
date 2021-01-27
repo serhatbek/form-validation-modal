@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Validation Modal</title>
+  <script src="https://kit.fontawesome.com/f0d4beef0b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./src/assets/css/main.css">
 </head>
 
@@ -55,6 +56,55 @@
           Hurry up! for more offers</p>
         <button class="hero__cont-btn">BOOK NOW</button>
       </div>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="close-modal-btn"><i class="far fa-times-circle"></i></div>
+    <div class="form__container">
+      <form action="./index.html" class="form">
+        <h3 class="form__title">SIGNIN</h3>
+        <div class="form__group">
+          <label class="form__group-label" for="name"><i class="fas fa-user"></i></label>
+          <input class="form__group-input" type="text" id="name" placeholder="Username">
+        </div>
+
+        <div class="form__group">
+          <label class="form__group-label" for="password"><i class="fas fa-unlock-alt"></i></label>
+          <input class="form__group-input" type="password" id="password" placeholder="Your Password">
+        </div>
+        <button class="form__btn" type="submit">SUBMIT</button>
+      </form>
+
+      <form action="./index.html" class="form">
+        <h3 class="form__title">SIGNUP</h3>
+        <div class="form__group">
+          <label class="form__group-label" for="name"><i class="fas fa-user"></i></label>
+          <input class="form__group-input" type="text" id="name" placeholder="Username">
+        </div>
+
+        <div class="form__group">
+          <label class="form__group-label" for="email"><i class="fas fa-envelope"></i></label>
+          <input class="form__group-input" type="email" id="email" placeholder="Your Email">
+        </div>
+
+        <div class="form__group">
+          <label class="form__group-label" for="password"><i class="fas fa-unlock-alt"></i></label>
+          <input class="form__group-input" type="password" id="password" placeholder="Your Password">
+        </div>
+
+        <div class="form__group">
+          <label class="form__group-label" for="verify-password"><i class="fas fa-unlock-alt"></i></label>
+          <input class="form__group-input" type="verify-password" id="password" placeholder="Verify Your Password">
+        </div>
+
+        <div class="form__group">
+          <input class="form__group-checkbox" type="checkbox">
+          <span>Agree with the terms and conditions</span>
+        </div>
+        <button class="form__btn" type="submit">SUBMIT</button>
+      </form>
+      <form action="" class="form form__signup"></form>
     </div>
   </div>
 
