@@ -17,9 +17,3 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
-
-@mixin flexCenter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}

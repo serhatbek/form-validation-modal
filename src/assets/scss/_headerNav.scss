@@ -1,54 +1,130 @@
 header {
   height: 80px;
+
+  transition: 0.2s cubic-bezier(0.62, 1.24, 0, -0.75);
+
+  @include media(atMedium) {
+    background-color: #535461;
+    width: 100%;
+    height: 40%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    position: fixed;
+    margin-top: -600px;
+  }
+
+  &.open {
+    margin-top: 0;
+  }
+
   .container {
     @include flexCenter;
+    padding: 0 15px;
+
+    @include media(atMedium) {
+      flex-direction: column;
+    }
 
     .logo {
       width: 80px;
       height: 80px;
+      margin-top: 20px;
+
+      @include media(atMedium) {
+        margin: 20px 0;
+      }
 
       img {
         width: 100%;
-        margin-top: 10px;
       }
     }
 
     .main-nav {
+      height: 80px;
       @include flexCenter;
+
+      @include media(atMedium) {
+        width: 100%;
+        height: 30%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
 
       &__list {
         @include flexCenter;
         list-style-type: none;
 
+        @include media(atMedium) {
+          flex-direction: column;
+        }
+
         &-item {
           margin-right: 80px;
+          height: 25px;
+          border-bottom: 0px;
+          transition: 0.2s 0.3s ease-out;
+
+          &::after {
+            content: '';
+            width: 0;
+            display: block;
+            height: 3px;
+            background: #229292;
+            transition: width 0.3s ease-out;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+
+          @include media(atMedium) {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
         }
 
         &-link {
           text-decoration: none;
           color: #535461;
           font-weight: 700;
+
+          @include media(atMedium) {
+            color: #fff;
+          }
         }
       }
 
       .sign-btns {
+        @include media(atMedium) {
+          display: flex;
+          flex-direction: column;
+        }
+
         &__login {
           background-color: #229292;
-          padding: 14px 32px;
+          padding: 14px 42px;
           border: none;
           border-radius: 30px;
           color: #fff;
           font-weight: 700;
           transition: 0.3s ease-out;
           outline: none;
-          box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3);
+          margin-right: 10px;
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
 
           &:hover {
-            transform: translateY(-1px);
+            box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3);
           }
 
           &:active {
             transform: translateY(1px);
+          }
+
+          @include media(atMedium) {
+            margin-right: 0;
           }
         }
 
@@ -56,15 +132,58 @@ header {
           border: none;
           background-color: transparent;
           font-weight: 700;
-          color: #535461;
+          color: #a3a9c7;
           outline: none;
           transition: 0.3s ease-out;
 
           &:hover {
             color: red;
           }
+
+          @include media(atMedium) {
+            margin-top: 10px;
+          }
         }
       }
     }
+  }
+
+  .hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 22;
+    display: none;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+
+    &__line--top,
+    &__line--middle,
+    &__line--bottom {
+      height: 3px;
+      width: 35px;
+      background-color: #229292;
+      border-radius: 3px;
+      transition: 0.4s ease-in-out;
+    }
+
+    @include media(atMedium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .hamburger-menu.open .hamburger-menu__line--top {
+    transform: rotateZ(-405deg) translate(-10px, 6px);
+  }
+
+  .hamburger-menu.open .hamburger-menu__line--middle {
+    display: none;
+  }
+
+  .hamburger-menu.open .hamburger-menu__line--bottom {
+    transform: rotateZ(405deg) translate(-9px, -6px);
   }
 }
