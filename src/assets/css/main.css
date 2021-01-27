@@ -19,7 +19,7 @@ body {
 
 header {
   height: 80px;
-  transition: 0.2s cubic-bezier(0.62, 1.24, 0, -0.75);
+  transition: 0.4s 0.4s cubic-bezier(0.32, 1.74, 1, 0.52);
 }
 
 @media (max-width: 767px) {
@@ -200,6 +200,7 @@ header .hamburger-menu {
   width: 35px;
   height: 25px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 header .hamburger-menu__line--top, header .hamburger-menu__line--middle, header .hamburger-menu__line--bottom {
