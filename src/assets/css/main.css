@@ -147,6 +147,7 @@ header .container .main-nav__list-link {
 }
 
 header .container .main-nav .sign-btns__login {
+  cursor: pointer;
   background-color: #229292;
   padding: 14px 42px;
   border: none;
@@ -175,6 +176,7 @@ header .container .main-nav .sign-btns__login:active {
 
 header .container .main-nav .sign-btns__signup {
   border: none;
+  cursor: pointer;
   background-color: transparent;
   font-weight: 700;
   color: #a3a9c7;
@@ -193,6 +195,7 @@ header .container .main-nav .sign-btns__signup:hover {
 }
 
 header .hamburger-menu {
+  cursor: pointer;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -200,7 +203,6 @@ header .hamburger-menu {
   display: none;
   width: 35px;
   height: 25px;
-  cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
@@ -287,6 +289,7 @@ header .hamburger-menu.open .hamburger-menu__line--bottom {
 }
 
 .hero__cont-btn {
+  cursor: pointer;
   background-color: #229292;
   padding: 14px 52px;
   border: none;
@@ -458,6 +461,7 @@ header .hamburger-menu.open .hamburger-menu__line--bottom {
   padding: 5px 0;
   border-radius: 10px;
   background-color: salmon;
+  cursor: pointer;
   color: #e2e2e2;
   box-shadow: 0px 3px 26px -8px rgba(0, 0, 0, 0.4);
   transition: 0.3s 0.1s ease-in-out;

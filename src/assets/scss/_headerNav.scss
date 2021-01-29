@@ -103,6 +103,7 @@ header {
         }
 
         &__login {
+          cursor: pointer;
           background-color: #229292;
           padding: 14px 42px;
           border: none;
@@ -129,6 +130,7 @@ header {
 
         &__signup {
           border: none;
+          cursor: pointer;
           background-color: transparent;
           font-weight: 700;
           color: #a3a9c7;
@@ -148,6 +150,7 @@ header {
   }
 
   .hamburger-menu {
+    cursor: pointer;
     position: fixed;
     top: 20px;
     right: 20px;
@@ -155,7 +158,6 @@ header {
     display: none;
     width: 35px;
     height: 25px;
-    cursor: pointer;
     transition: 0.3s ease-in-out;
 
     &__line--top,
