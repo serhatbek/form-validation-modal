@@ -46,11 +46,11 @@
     .form {
       display: none;
 
-      &.open-signin {
+      &.signin-form.open {
         display: block;
       }
 
-      &.open-signup {
+      &.signup-form.open {
         display: block;
       }
 
@@ -125,6 +125,11 @@
           font-size: 14px;
           margin-left: 10px;
           color: #e8e8e8;
+        }
+
+        .text-help {
+          font-size: 10px;
+          color: red;
         }
       }
 

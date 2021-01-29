@@ -350,11 +350,11 @@ header .hamburger-menu.open .hamburger-menu__line--bottom {
   display: none;
 }
 
-.modal .form__container .form.open-signin {
+.modal .form__container .form.signin-form.open {
   display: block;
 }
 
-.modal .form__container .form.open-signup {
+.modal .form__container .form.signup-form.open {
   display: block;
 }
 
@@ -432,6 +432,11 @@ header .hamburger-menu.open .hamburger-menu__line--bottom {
   font-size: 14px;
   margin-left: 10px;
   color: #e8e8e8;
+}
+
+.modal .form__container .form__group .text-help {
+  font-size: 10px;
+  color: red;
 }
 
 .modal .form__container .form__btn {
