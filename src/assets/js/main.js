@@ -46,22 +46,38 @@ function closeModal() {
 // FORM VALIDATION
 
 var pristine;
+var pristine2;
 window.onload = function () {
   var formLog = document.getElementById('form1');
   var form = document.getElementById('form2');
 
-  pristine = new Pristine(form);
-  pristine = new Pristine(formLog);
+  pristine = new Pristine(form, {
+    classTo: 'form-group',
+    errorClass: 'has-danger',
+    successClass: 'has-success',
+    errorTextParent: 'form-group',
+    errorTextTag: 'div',
+    errorTextClass: 'text-help',
+  });
+
+  pristine2 = new Pristine(formLog, {
+    classTo: 'form-group',
+    errorClass: 'has-danger',
+    successClass: 'has-success',
+    errorTextParent: 'form-group',
+    errorTextTag: 'div',
+    errorTextClass: 'text-help',
+  });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var valid = pristine.validate();
-    alert('Form is valid: ' + valid);
+    // alert('Form is valid: ' + valid);
   });
 
   formLog.addEventListener('submit', function (e) {
     e.preventDefault();
-    var valid = pristine.validate();
-    alert('Form is valid: ' + valid);
+    var valid = pristine2.validate();
+    // alert('Form is valid: ' + valid);
   });
 };
